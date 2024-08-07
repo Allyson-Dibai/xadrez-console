@@ -1,8 +1,9 @@
 ﻿using System;
-using xadrez;
 using tabuleiro;
+using xadrez;
+using XadrezConsole;
 
-namespace XadrezConsole
+namespace xadrez_console
 {
     class Program
     {
@@ -11,19 +12,15 @@ namespace XadrezConsole
 
             try
             {
-               PartidaDeXadrez partida = new PartidaDeXadrez();
-
-                Tela.imprimirTabuleiro(partida.tab);
+                PartidaDeXadrez partida = new PartidaDeXadrez();
 
                 while (!partida.terminada)
                 {
+
                     try
                     {
                         Console.Clear();
-                        Tela.imprimirTabuleiro(partida.tab);
-                        Console.WriteLine();
-                        Console.WriteLine("Turno: " + partida.turno);
-                        Console.WriteLine("Aguardando jogada: " + partida.jogadorAtual);
+                        Tela.imprimirPartida(partida);
 
                         Console.WriteLine();
                         Console.Write("Origem: ");
@@ -48,7 +45,8 @@ namespace XadrezConsole
                         Console.ReadLine();
                     }
                 }
-
+                Console.Clear();
+                Tela.imprimirTabuleiro(partida.tab);
             }
             catch (TabuleiroException e)
             {
