@@ -4,7 +4,7 @@ using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Security.AccessControl;
 using tabuleiro;
-using XadrezConsole.xadrez;
+using xadrez;
 
 namespace xadrez
 {
@@ -248,7 +248,7 @@ namespace xadrez
         public HashSet<Peca> pecasEmJogo(Cor cor)
         {
             HashSet<Peca> aux = new HashSet<Peca>();
-            foreach (Peca x in capturadas)
+            foreach (Peca x in pecas)
             {
                 if (x.cor == cor)
                 {
@@ -345,7 +345,7 @@ namespace xadrez
             colocarNovaPeca('c', 1, new Bispo(tab, Cor.Branca));
             colocarNovaPeca('d', 1, new Dama(tab, Cor.Branca));
             colocarNovaPeca('e', 1, new Rei(tab, Cor.Branca, this));
-            colocarNovaPeca('f', 1, new Bispo(tab, Cor.Branca)); 
+            colocarNovaPeca('f', 1, new Bispo(tab, Cor.Branca));
             colocarNovaPeca('g', 1, new Cavalo(tab, Cor.Branca));
             colocarNovaPeca('h', 1, new Torre(tab, Cor.Branca));
             colocarNovaPeca('a', 2, new Peao(tab, Cor.Branca, this));

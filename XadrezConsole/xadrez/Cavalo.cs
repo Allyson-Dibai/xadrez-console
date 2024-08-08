@@ -2,9 +2,11 @@
 
 namespace xadrez
 {
-    class Cavalo : Peca 
+
+    class Cavalo : Peca
     {
-        public Cavalo(Tabuleiro tab, Cor cor) : base(tab, cor) 
+
+        public Cavalo(Tabuleiro tab, Cor cor) : base(tab, cor)
         {
         }
 
@@ -67,6 +69,6 @@ namespace xadrez
             }
 
             return mat;
-        } 
+        }
     }
 }

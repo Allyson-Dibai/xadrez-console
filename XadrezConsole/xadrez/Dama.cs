@@ -1,9 +1,11 @@
 ﻿using tabuleiro;
 
-namespace XadrezConsole.xadrez
+namespace xadrez
 {
+
     class Dama : Peca
     {
+
         public Dama(Tabuleiro tab, Cor cor) : base(tab, cor)
         {
         }
@@ -25,7 +27,7 @@ namespace XadrezConsole.xadrez
 
             Posicao pos = new Posicao(0, 0);
 
-            // esquerda 
+            // esquerda
             pos.definirValores(posicao.linha, posicao.coluna - 1);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
@@ -109,7 +111,7 @@ namespace XadrezConsole.xadrez
                 pos.definirValores(pos.linha + 1, pos.coluna + 1);
             }
 
-            // SE
+            // SO
             pos.definirValores(posicao.linha + 1, posicao.coluna - 1);
             while (tab.posicaoValida(pos) && podeMover(pos))
             {
@@ -120,6 +122,7 @@ namespace XadrezConsole.xadrez
                 }
                 pos.definirValores(pos.linha + 1, pos.coluna - 1);
             }
+
             return mat;
         }
     }
