@@ -57,7 +57,7 @@ namespace tabuleiro
 
         }
 
-        public bool posicaValida(Posicao pos)
+        public bool posicaoValida(Posicao pos)
         {
             if (pos.linha < 0 || pos.linha >= linhas || pos.coluna < 0 || pos.coluna >= colunas)
             {
@@ -68,7 +68,7 @@ namespace tabuleiro
 
         public void validarPosicao(Posicao pos)
         {
-            if (!posicaValida(pos))
+            if (!posicaoValida(pos))
             {
                 throw new TabuleiroException("Posição Invalida!");
             }
